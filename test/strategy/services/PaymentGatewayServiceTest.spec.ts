@@ -1,7 +1,7 @@
-import { PaymentGatewayService } from "../../src/strategy/services/PaymentGateway.service";
-import { MercadoPago } from "../../src/strategy/services/payment_gateways/MercadoPago";
-import { Assas } from "../../src/strategy/services/payment_gateways/Asaas";
-import { Stripe } from "../../src/strategy/services/payment_gateways/Stripe";
+import { PaymentGatewayService } from "../../../src/strategy/services/PaymentGateway.service";
+import { MercadoPago } from "../../../src/strategy/services/payment_gateways/MercadoPago";
+import { Assas } from "../../../src/strategy/services/payment_gateways/Asaas";
+import { Stripe } from "../../../src/strategy/services/payment_gateways/Stripe";
 
 let apiKey: any;
 let environment: any
