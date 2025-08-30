@@ -3,10 +3,6 @@ import { MercadoPago } from "../../../src/strategy/services/payment_gateways/Mer
 import { Asaas } from "../../../src/strategy/services/payment_gateways/Asaas";
 import { Stripe } from "../../../src/strategy/services/payment_gateways/Stripe";
 
-let apiKey: any;
-let environment: any
-let timeout: any
-
 describe('casos de testes de PaymentGatewayService', () => {
 
     // variaveis de configuração
