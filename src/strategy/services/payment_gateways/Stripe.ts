@@ -12,20 +12,20 @@ export class Stripe implements InterfacePaymentGateway {
         this.timeout = timeout ?? 500;
     }
 
-    createPayment(amount: number, currency: string) {
-        console.log(`STRIPE: Criando pagamento: ${amount}, ${currency} - ${this.apiKey}`);
+    createPayment(amount: number, currency: string): void {
+        console.log(`Criando um pagamento: ${amount}, ${currency} - ${this.apiKey}`);
     }
 
-    refundPayment(paymentId: number, amount?: number) {
-        console.log(`STRIPE: Estorno de um pagamento: ${paymentId}, quantia: ${amount}`);
+    refundPayment(paymentId: number, amount?: number): void {
+        console.log(`Estorno do pagamento: ${paymentId} - ${amount}`);
     }
 
     cancelPayment(paymentId: number): void {
-        console.log(`STRIPE: Cancelando um pagamento: ${paymentId}`)
+        console.log(`Cancelando um pagamento ${paymentId}`);
     }
 
     getPaymentStatus(paymentId: number): void {
-        console.log(`STRIPE: Obtendo status de um pagamento: ${paymentId}`)
+        console.log(`Obtendo um status de pagamento: ${paymentId}`);
     }
 
 }

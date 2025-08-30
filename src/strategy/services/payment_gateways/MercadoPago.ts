@@ -13,18 +13,18 @@ export class MercadoPago implements InterfacePaymentGateway {
     }
 
     createPayment(amount: number, currency: string): void {
-        console.log(`MERCADO PAGO: Criando um pagamento: ${amount}, ${currency} - ${this.apiKey}`);
+        console.log(`Criando um pagamento: ${amount}, ${currency} - ${this.apiKey}`);
     }
 
     refundPayment(paymentId: number, amount?: number): void {
-        console.log(`MERCADO PAGO: Estrono de um pagamento: ${paymentId} - ${amount}`);
+        console.log(`Estorno do pagamento: ${paymentId} - ${amount}`);
     }
 
     cancelPayment(paymentId: number): void {
-        console.log(`MERCADO PAGO: Cancelando um pagamento: ${paymentId}`);
+        console.log(`Cancelando um pagamento ${paymentId}`);
     }
 
     getPaymentStatus(paymentId: number): void {
-        console.log(`MERCADO PAGO: Obtendo um status de um pagamento: ${paymentId}}`);
+        console.log(`Obtendo um status de pagamento: ${paymentId}`);
     }
 }

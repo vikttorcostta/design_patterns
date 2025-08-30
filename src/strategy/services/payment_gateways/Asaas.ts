@@ -13,19 +13,19 @@ export class Assas implements InterfacePaymentGateway {
     }
 
     createPayment(amount: number, currency: string): void {
-        console.log(`ASAAS: Criando pagamento: ${amount}, ${currency} - ${this.apiKey}`);
+        console.log(`Criando um pagamento: ${amount}, ${currency} - ${this.apiKey}`);
     }
 
     refundPayment(paymentId: number, amount?: number): void {
-        console.log(`ASAAS: Estorno do pagamento: ${paymentId} - ${amount}`);
+        console.log(`Estorno do pagamento: ${paymentId} - ${amount}`);
     }
 
     cancelPayment(paymentId: number): void {
-        console.log(`ASAAS: Cancelando um pagamento ${paymentId}`);
+        console.log(`Cancelando um pagamento ${paymentId}`);
     }
 
     getPaymentStatus(paymentId: number): void {
-        console.log(`ASSAS: Obtendo um status de pagamento: ${paymentId}`);
+        console.log(`Obtendo um status de pagamento: ${paymentId}`);
     }
 
 }
