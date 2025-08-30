@@ -50,7 +50,7 @@ describe('casos de testes de PaymentGatewayService', () => {
         expect(strategyStripe.pay(1, 'BRL')).toBeFalsy();
     })
 
-    test('espera uma exeção ao receber valores vazios', () => {
+    test('espera uma exceção ao receber valores vazios', () => {
         const strategy_asaas = new PaymentGatewayService(asaas);
 
         expect(() => strategy_asaas.pay(null, 'BRL')).toThrow('Valor e moeda são obrigatórios');
