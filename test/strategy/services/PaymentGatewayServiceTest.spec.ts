@@ -47,7 +47,17 @@ describe('casos de testes de PaymentGatewayService', () => {
 
     test('faz um pagamento falhar - mercado pago', () => {
         const strategyStripe = new PaymentGatewayService(stripe);
-        expect(strategyStripe.pay('sasa', 'sasa')).toBeFalsy();
+        expect(strategyStripe.pay(1, 'BRL')).toBeFalsy();
+    })
+
+    test('espera uma exeção ao receber valores vazios', () => {
+        const strategy_asaas = new PaymentGatewayService(asaas);
+
+        expect(() => strategy_asaas.pay(null, 'BRL')).toThrow('Valor e moeda são obrigatórios');
+        expect(() => strategy_asaas.pay(100, null)).toThrow('Valor e moeda são obrigatórios');
+        expect(() => strategy_asaas.pay(0, 'BRL')).toThrow('Valor e moeda são obrigatórios');
+        expect(() => strategy_asaas.pay(100, '')).toThrow('Valor e moeda são obrigatórios');
+        expect(() => strategy_asaas.pay(undefined, 'BRL')).toThrow();
     })
 
 });
