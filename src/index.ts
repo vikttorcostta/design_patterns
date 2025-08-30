@@ -1,5 +1,5 @@
 import { PaymentGatewayFactory } from './factoryMethod/PaymentFactory';
-import { Assas } from './strategy/services/payment_gateways/Asaas';
+import { Asaas } from './strategy/services/payment_gateways/Asaas';
 import { MercadoPago } from './strategy/services/payment_gateways/MercadoPago';
 import { Stripe } from './strategy/services/payment_gateways/Stripe';
 import { PaymentGatewayService } from './strategy/services/PaymentGateway.service';
@@ -24,7 +24,7 @@ strategy_mercado_pago.cancel(1);
 strategy_mercado_pago.status(1);
 
 // asaas
-const asaas = new Assas(apiKey, environment, timeout);
+const asaas = new Asaas(apiKey, environment, timeout);
 const strategy_asaas = new PaymentGatewayService(asaas);
 strategy_asaas.pay(8000, 'BRL');
 strategy_asaas.refund(2, 8000);

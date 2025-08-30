@@ -1,6 +1,6 @@
 import type { InterfacePaymentGateway } from "../PaymentGateway.interface";
 
-export class Assas implements InterfacePaymentGateway {
+export class Asaas implements InterfacePaymentGateway {
 
     apiKey: string;
     environment: string;
