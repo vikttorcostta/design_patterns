@@ -15,15 +15,15 @@ beforeEach(() => {
 
 test('configura o gateway de pagamento mercado pago', () => {
     const mercadoPago = new MercadoPago(apiKey, environment, timeout);
-    expect(mercadoPago).toBe(mercadoPago);
+    expect(mercadoPago).toBeTruthy()
 });
 
 test('configura o gateway de pagamento asaas', () => {
     const asaas = new Assas(apiKey, environment, timeout);
-    expect(asaas).toBe(asaas);
+    expect(asaas).toBeTruthy();
 });
 
 test('configura o gateway de pagamento stripe', () => {
     const stripe = new Stripe(apiKey, environment, timeout);
-    expect(stripe).toBe(stripe);
+    expect(stripe).toBeTruthy();
 });
